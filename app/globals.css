@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px; /* Размер шрифта по умолчанию */
+    line-height: 1.15; /* Высота строки по умолчанию */
+    font-family: 'Inter', Arial, sans-serif; /* Шрифт по умолчанию */
+  }
+}
+
+/*html, body {*/
+/*  touch-action: pan-x pan-y;*/
+/*  overscroll-behavior: none;*/
+/*  -webkit-user-select: none;         !* Отключает выделение текста *!*/
+/*  user-select: none;*/
+/*  -webkit-touch-callout: none;       !* Отключает всплывающее меню по long-press на iOS *!*/
+/*  touch-action: manipulation;        !* Отключает двойной тап, масштабирование и т.д. *!*/
+/*}*/
+
+.mobile-touch-lock {
+  touch-action: pan-x pan-y;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+
+
+@keyframes spin-once {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.animate-spin-once {
+  animation: spin-once 0.5s linear;
+}
+
+
+
+.scroll-container {
+  mask-image: linear-gradient(to bottom,
+  rgba(0, 0, 0, 0) 0px,
+  black 20px,
+  black calc(100% - 20px),
+  rgba(0, 0, 0, 0) 100%);
+}
+
+
+html.light {
+  @apply bg-light-background text-light-text;
+}
+html.dark {
+  @apply bg-dark-background text-dark-text;
+}
+
+
+/* 📌 Трек (фон за ползунком) */
+::-webkit-scrollbar-track {
+  background: transparent; /* Полностью прозрачный */
+}
+/* 📌 Ползунок (по умолчанию скрыт) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+  opacity: 0; /* 🔥 Полностью скрыт */
+  transition: opacity 0.3s ease-in-out;
+}
+/* 📌 Показывать скроллбар только при наведении */
+*::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+/* 📌 Показывать при наведении */
+*:hover {
+  scrollbar-color: #888 transparent;
+}
+
+
+@keyframes deepPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+}
+.deep-pulse {
+  animation: deepPulse 1.8s ease-in-out infinite;
+}

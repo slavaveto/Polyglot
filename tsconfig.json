@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2021", // Обновляем до ES2021 для полной поддержки Promise
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2021"
+    ], // Заменяем "esnext" на "es2021"
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+
+    "moduleResolution": "node", // Убедитесь, что используете "node" для корректного разрешения модулей
+
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "electron/global.d.ts",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+   "files.exclude": {
+      ".idea": true,
+      ".next": true,
+      "node_modules": true,
+      ".gitignore": false,
+      ".prettierrc": true,
+      "eslint.config.mjs": true,
+      "middleware.ts": true,
+      "next-env.d.ts": true,
+      "next.config.ts": true,
+      "package-lock.json": true,
+      "package.json": true,
+      "postcss.config.mjs": true,
+      "tailwind.config.ts": true,
+      "tsconfig.json": true
+   },
+   "window.title": "Polyglot_v1",
+   "workbench.colorCustomizations": {
+      "sideBarSectionHeader.foreground": "#15b000",
+      "statusBar.background": "#15b00099"
+   }
+}
