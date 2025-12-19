@@ -4,7 +4,7 @@ import usePersistentState from "@/app/utils/usePersistentState"
 
 // ✅ Определяем типы
 interface MainContextType {
-
+//2345
     language: string;
     setLanguage: (lang: string) => void;
     selectedTab: string;
